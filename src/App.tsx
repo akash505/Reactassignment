@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { OverlayPanel } from 'primereact/overlaypanel';
@@ -31,6 +31,7 @@ export default function CheckboxRowSelectionDemo() {
 
   useEffect(() => {
     fetchData(currentPage);
+    setRowClick(true);
   }, [currentPage]);
 
   const fetchData = async (page: number) => {
